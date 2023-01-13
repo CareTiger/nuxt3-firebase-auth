@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+        "@nuxtjs/tailwindcss": "^6.2.0",
+        "nuxt": "3.0.0"
+    },
+    "dependencies": {
+        "firebase": "^9.15.0",
+        "human-time": "^0.0.2",
+        "lodash": "^4.17.21"
+    }
+}
