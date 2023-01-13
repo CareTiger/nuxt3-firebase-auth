@@ -1,7 +1,7 @@
 <template>
     <div class="p-8">
         <div class="has-text-centered my-2">
-            <p class="text-xl">Firebase/Nuxt3 Auth</p>
+            <p class="text-xl">Nuxt3 Firebase Auth</p>
         </div>
         <ul class="flex flex-row justify-between space-x-6">
             <li>
