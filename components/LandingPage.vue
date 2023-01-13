@@ -1,5 +1,6 @@
 <template>
     <div>
-        <h1 class="text-xl text-center">Landing Page - You are not signed in</h1>
+        <h1 class="text-xl text-center">Landing Page</h1>
+        <p class="text-center">You are not signed in</p>
     </div>
 </template>
