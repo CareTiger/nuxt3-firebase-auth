@@ -34,23 +34,24 @@ export const signInUser = async (email, password) => {
 export const initUser = async () => {
     const auth = getAuth();
     const firebaseUser = useFirebaseUser();
-    firebaseUser.value = auth.currentUser;
     const userCookie = useCookie('userCookie');
+
+    console.log('initUser', firebaseUser.value);
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/firebase.User
             const uid = user.uid;
-            // ...
+            firebaseUser.value = user;
             console.log('user is signed in');
             console.log('uid', user.uid);
         } else {
             // User is signed out
             // ...
+            firebaseUser.value = null;
             console.log('user is logged out');
         }
-        firebaseUser.value = user;
         userCookie.value = user; // set user cookie
     });
 };

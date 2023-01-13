@@ -9,19 +9,13 @@
 </style>
 
 <script setup>
-import {
-    getAuth,
-    onAuthStateChanged,
-} from 'firebase/auth';
 // const { $auth, $db, $storage } = useNuxtApp();
 
 watchEffect(() => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
+    const user = useFirebaseUser();
+    console.log('watchEffect - auth', user.value?.uid);
+    if(user.value){
         useGetUser(user);
-    });
-    // console.log('watchEffect - auth', $auth);
-    // console.log('watchEffect - db', $db);
-    // console.log('watchEffect - storage', $storage);
+    }
 });
 </script>
